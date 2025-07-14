@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display:grid;
+    grid-template-areas: 
+    "navbar navbar"
+    "aside main"
+    "pie pie";
+    grid-template-columns: 1.2fr 5fr;
+    height: 100vh;
+    background-color: #38b000;
+}
+
+.navbar{
+    grid-area: navbar;
+    
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #38b000;
+    padding: 0% 5% 0% 0%;
+}
+
+.portada{
+    border-radius: 50px;
+}
+
+.productos{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    
+}
+.aside{
+    grid-area: aside;
+    
+}
+
+.title{
+    padding-left: 20%;
+}
+.busqueda{
+    display: flex;
+    
+    flex-direction: column;
+    background-color: #ccff33;
+    height: 100%;
+    padding: 8% 7% 2% 7%;
+
+}
+
+
+.main{
+    grid-area: main;
+    
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(2, auto) ;
+    column-gap: 10px;
+    row-gap: 20px;
+    background-color: #38b000;
+    
+}
+
+.grid-item{
+    width: 390px;
+    text-align: center;
+    background-color: white;
+}
+
+.card-img{
+    width: 390px;
+
+}
+
+.card-title{
+   padding: 0% 0% 2% 0%;
+
+}
+.card-precio{
+    padding: 2% 0% 2% 0%;
+}
+
+.card-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccff33;
+    font-size: medium;
+    padding: 2% 42% 2% 42%;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #38b000;
+}
+
+
+.pie{
+    grid-area: pie;
+    background-color: #004b23;
+    color: aliceblue;
+    font-size: 70%;
+    padding: 2% 2% 2% 2%;
+    text-align: center;
+}
+
+.boton{
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .main-container{
+        display:grid;
+         grid-template-columns: 1fr;
+        row-gap: 10px; 
+    }
+    
+
+    .boton{
+        display: block;
+
+    }
+    .boton:hover{
+        scale: 1.5;
+    }
+
+    .productos-items{
+        display: none;
+        
+    }
+    .container{
+    grid-template-areas: 
+    "navbar"
+    "aside"
+    "main"
+    "pie";
+    height: auto;
+    grid-template-rows: auto auto auto auto;
+    
+}
+
+}
